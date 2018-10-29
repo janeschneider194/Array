@@ -1,19 +1,33 @@
-
+/**
+ * 
+ * @author jane schneider
+ * Array Homework
+ */
 public class DiceArrayMain
 {
 	public static void main(String[] args)
 	{
 		DiceArray jane = new DiceArray();
 		DiceArray mae = new DiceArray();
-		
+	/**
+	 * create a dice to roll	
+	 */
 		int rollOne = jane.roll();
 		int rollTwo = mae.roll();
 		int totalRoll = rollOne + rollTwo;
-		
+	/**
+	 * store the rolls in variable	
+	 */
 		int count[] = new int[11];
-		
+	/**
+	 * create an array to store the number of times the specific variable value is rolled	
+	 */
 		for(int i = 0; i<= 1000; i++)
 		{
+	/**
+	 * create a for loop to roll the dice until 1000 rolls are done and store the number of rolls equal 
+	 * to the target rolls in the array
+	 */
 			rollOne = jane.roll();
 			rollTwo = mae.roll();
 			totalRoll = rollOne + rollTwo;
@@ -64,7 +78,9 @@ public class DiceArrayMain
 			}
 		
 		}
-		
+		/**
+		 * print the number of rolls counted in accordance to the values stored into the array
+		 */
 		System.out.println("Number of 2's rolled: " + count[0]);
 		System.out.println("Number of 3's rolled: " + count[1]);
 		System.out.println("Number of 4's rolled: " + count[2]);
